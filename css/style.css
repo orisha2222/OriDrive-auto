@@ -954,3 +954,288 @@ section {
         padding: 20px 0;
     }
 }
+/* =========================================
+   SHOP PAGE
+   ========================================= */
+
+
+/* SHOP HERO */
+
+.shop-hero {
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            #2a170d 0%,
+            #111111 38%,
+            #080808 75%
+        );
+
+    color: white;
+
+    padding: 90px 0;
+}
+
+.shop-hero h1 {
+    font-size: clamp(45px, 7vw, 78px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 20px;
+}
+
+.shop-hero p:not(.eyebrow) {
+    color: #999999;
+
+    font-size: 17px;
+
+    max-width: 550px;
+}
+
+
+/* SHOP SECTION */
+
+.shop-section {
+    background: #ffffff;
+}
+
+
+/* SHOP CONTROLS */
+
+.shop-controls {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 45px;
+}
+
+
+/* SEARCH */
+
+.search-box {
+    flex: 1;
+
+    max-width: 400px;
+}
+
+.search-box input {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 18px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #111111;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.search-box input::placeholder {
+    color: #999999;
+}
+
+.search-box input:focus {
+    border-color: var(--orange);
+
+    box-shadow:
+        0 0 0 3px rgba(255, 106, 0, 0.1);
+}
+
+
+/* CATEGORY BUTTONS */
+
+.category-buttons {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+}
+
+.category-button {
+    border: 1px solid #dddddd;
+
+    background: white;
+
+    color: #555555;
+
+    padding: 10px 15px;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.category-button:hover {
+    border-color: var(--orange);
+
+    color: var(--orange);
+}
+
+.category-button.active {
+    background: var(--black);
+
+    border-color: var(--black);
+
+    color: white;
+}
+
+
+/* SHOP PRODUCT GRID */
+
+.shop-products {
+    grid-template-columns:
+        repeat(3, 1fr);
+}
+
+
+/* NO PRODUCTS */
+
+.no-products {
+    padding: 60px 20px;
+
+    text-align: center;
+
+    color: #777777;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   CART MESSAGE
+   ========================================= */
+
+.cart-message {
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 30px;
+
+    transform:
+        translate(-50%, 30px);
+
+    z-index: 2000;
+
+    background: var(--black);
+
+    color: white;
+
+    padding: 14px 20px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.cart-message.show {
+    opacity: 1;
+
+    transform:
+        translate(-50%, 0);
+}
+
+
+/* =========================================
+   MOBILE SHOP
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .shop-controls {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .search-box {
+        max-width: none;
+    }
+
+    .category-buttons {
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .shop-hero {
+        padding: 70px 0;
+    }
+
+    .shop-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .category-buttons {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        width: 100%;
+    }
+
+    .category-button {
+        width: 100%;
+
+        border-radius: 7px;
+    }
+
+    .shop-products {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-message {
+        width: calc(100% - 30px);
+
+        text-align: center;
+
+        bottom: 20px;
+    }
+
+}
