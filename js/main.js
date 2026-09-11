@@ -1211,9 +1211,85 @@ function getVroomResponse(
 /* SEND MESSAGE */
 /* ================================= */
 
-function sendVroomMessage(
-    message
-) {
+async function sendVroomMessage(message) {
+
+    if (!message.trim()) {
+        return;
+    }
+
+    addVroomMessage(
+        message,
+        "user"
+    );
+
+    vroomInput.value = "";
+
+    addVroomMessage(
+        "🚗 VROOM is thinking...",
+        "bot"
+    );
+
+    try {
+
+        const response = await fetch(
+            "https://YOUR-VERCEL-DOMAIN.vercel.app/api/chat",
+            {
+                method: "POST",
+
+                headers: {
+                    "Content-Type":
+                        "application/json"
+                },
+
+                body: JSON.stringify({
+                    message: message
+                })
+            }
+        );
+
+        const data =
+            await response.json();
+
+        const messages =
+            document.querySelectorAll(
+                ".vroom-message.bot"
+            );
+
+        const thinkingMessage =
+            messages[messages.length - 1];
+
+        if (data.reply) {
+
+            thinkingMessage.innerHTML =
+                data.reply;
+
+        } else {
+
+            thinkingMessage.innerHTML =
+                "🚗 Sorry, my engine stalled. Try again.";
+
+        }
+
+    } catch (error) {
+
+        console.error(error);
+
+        const messages =
+            document.querySelectorAll(
+                ".vroom-message.bot"
+            );
+
+        const thinkingMessage =
+            messages[messages.length - 1];
+
+        thinkingMessage.innerHTML =
+            "⚠️ VROOM couldn't connect to the AI server.";
+
+    }
+
+    vroomMessages.scrollTop =
+        vroomMessages.scrollHeight;
+}
 
     if (!message.trim()) {
         return;
