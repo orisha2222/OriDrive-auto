@@ -10,11 +10,6 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="description"
-        content="Shop premium car accessories from OriDrive Auto in Ethiopia."
-    >
-
     <title>Shop | OriDrive Auto</title>
 
     <link
@@ -24,800 +19,614 @@
 
 </head>
 
-
 <body>
-<!-- Floating OriDrive Settings Button -->
-<button class="floating-settings" id="settingsButton" aria-label="Open settings">
-    <img
-        src="images/238DFE22-C993-4670-8DEC-13A79928F5AA.png"
-        alt="OriDrive Auto"
+
+
+    <!-- Floating Settings Logo -->
+
+    <button
+        class="floating-settings"
+        id="settingsButton"
+        aria-label="Open settings"
     >
-</button>
 
-<!-- ================= HEADER ================= -->
+        <img
+            src="images/oridrive-logo.png"
+            alt="OriDrive Auto"
+        >
 
-<header class="header">
-
-    <div class="container header-content">
-
-        <a href="index.html" class="logo">
-
-            <span class="logo-main">
-                ORI<span>DRIVE</span>
-            </span>
-
-            <span class="logo-sub">
-                AUTO
-            </span>
-
-        </a>
+    </button>
 
 
-        <nav class="navigation">
+    <!-- Settings Popup -->
 
-            <a href="index.html">
-                Home
-            </a>
+    <div
+        class="settings-overlay"
+        id="settingsOverlay"
+    >
 
-            <a href="shop.html" class="active">
-                Shop
-            </a>
+        <div class="settings-popup">
 
-            <a href="about.html">
-                About
-            </a>
+            <button
+                class="settings-close"
+                id="settingsClose"
+            >
+                ×
+            </button>
 
-            <a href="reviews.html">
-                Reviews
-            </a>
+            <div class="settings-popup-logo">
 
-            <a href="delivery.html">
-                Delivery
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-<a href="settings.html">Settings</a>
-        </nav>
-
-
-        <a href="cart.html" class="cart-button">
-
-            Cart
-
-            <span class="cart-count">
-                0
-            </span>
-
-        </a>
-
-    </div>
-
-</header>
-
-
-
-<!-- ================= SHOP HERO ================= -->
-
-<section class="shop-hero">
-
-    <div class="container">
-
-        <p class="eyebrow">
-            ORIDRIVE AUTO
-        </p>
-
-        <h1>
-            Shop The Collection
-        </h1>
-
-        <p>
-            Premium accessories designed to make
-            every drive better.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= SHOP ================= -->
-
-<section class="shop-section">
-
-    <div class="container">
-
-
-        <!-- SEARCH + FILTER -->
-
-        <div class="shop-controls">
-
-
-            <div class="search-box">
-
-                <input
-                    type="search"
-                    id="product-search"
-                    placeholder="Search products..."
-                    aria-label="Search products"
+                <img
+                    src="images/oridrive-logo.png"
+                    alt="OriDrive Auto"
                 >
 
             </div>
 
+            <h2 data-i18n="settings">
+                Settings
+            </h2>
 
-            <div class="category-buttons">
+            <p
+                class="settings-description"
+                data-i18n="settingsDescription"
+            >
+                Customize your OriDrive Auto experience.
+            </p>
 
-                <button
-                    class="category-button active"
-                    data-category="all"
-                >
-                    All
-                </button>
+            <div class="setting-section">
 
-                <button
-                    class="category-button"
-                    data-category="byd"
-                >
-                    BYD
-                </button>
+                <h3 data-i18n="language">
+                    🌐 Language
+                </h3>
 
-                <button
-                    class="category-button"
-                    data-category="phone"
-                >
-                    Phone Accessories
-                </button>
+                <div class="language-options">
 
-                <button
-                    class="category-button"
-                    data-category="electronics"
-                >
-                    Electronics
-                </button>
+                    <button
+                        class="language-option"
+                        data-language="en"
+                    >
+                        <span>🇬🇧 English</span>
+                        <span class="language-check">✓</span>
+                    </button>
 
-                <button
-                    class="category-button"
-                    data-category="interior"
-                >
-                    Car Interior
-                </button>
+                    <button
+                        class="language-option"
+                        data-language="am"
+                    >
+                        <span>🇪🇹 አማርኛ</span>
+                        <span class="language-check">✓</span>
+                    </button>
+
+                    <button
+                        class="language-option"
+                        data-language="ar"
+                    >
+                        <span>🇸🇦 العربية</span>
+                        <span class="language-check">✓</span>
+                    </button>
+
+                </div>
 
             </div>
 
         </div>
 
+    </div>
 
 
-        <!-- PRODUCT GRID -->
+    <!-- Header -->
 
-        <div class="product-grid shop-products" id="product-grid">
+    <header class="header">
 
+        <div class="container header-inner">
 
-            <!-- PRODUCT 1 -->
-
-            <article
-                class="product-card"
-                data-category="phone byd"
-                data-name="BYD Magnetic Phone Holder"
+            <a
+                href="index.html"
+                class="brand"
             >
+                <span class="brand-text">
+                    ORIDRIVE
+                    <small>AUTO</small>
+                </span>
+            </a>
 
-                <div class="product-image">
+            <nav class="nav">
 
-                    <span>
-                        PRODUCT IMAGE
+                <a
+                    href="index.html"
+                    data-i18n="home"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="shop.html"
+                    data-i18n="shop"
+                >
+                    Shop
+                </a>
+
+                <a
+                    href="index.html#about"
+                    data-i18n="about"
+                >
+                    About
+                </a>
+
+                <a
+                    href="index.html#reviews"
+                    data-i18n="reviews"
+                >
+                    Reviews
+                </a>
+
+                <a
+                    href="index.html#delivery"
+                    data-i18n="delivery"
+                >
+                    Delivery
+                </a>
+
+                <a
+                    href="index.html#contact"
+                    data-i18n="contact"
+                >
+                    Contact
+                </a>
+
+                <a href="cart.html">
+
+                    <span data-i18n="cart">
+                        Cart
                     </span>
 
-                </div>
+                    (<span class="cart-count">0</span>)
 
+                </a>
 
-                <div class="product-info">
-
-                    <p class="product-category">
-                        BYD · PHONE ACCESSORY
-                    </p>
-
-                    <h3>
-                        BYD Magnetic Phone Holder
-                    </h3>
-
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            2,000 ETB
-                        </strong>
-
-
-                        <button
-                            class="add-to-cart"
-                            type="button"
-                            data-product="BYD Magnetic Phone Holder"
-                            data-price="2000"
-                        >
-                            Add +
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PRODUCT 2 -->
-
-            <article
-                class="product-card"
-                data-category="byd"
-                data-name="Premium Key Fob"
-            >
-
-                <div class="product-image">
-
-                    <span>
-                        PRODUCT IMAGE
-                    </span>
-
-                </div>
-
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        BYD ACCESSORY
-                    </p>
-
-                    <h3>
-                        Premium Key Fob
-                    </h3>
-
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            2,500 ETB
-                        </strong>
-
-
-                        <button
-                            class="add-to-cart"
-                            type="button"
-                            data-product="Premium Key Fob"
-                            data-price="2500"
-                        >
-                            Add +
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PRODUCT 3 -->
-
-            <article
-                class="product-card"
-                data-category="electronics"
-                data-name="Starlight Charger"
-            >
-
-                <div class="product-image">
-
-                    <span>
-                        PRODUCT IMAGE
-                    </span>
-
-                </div>
-
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        CAR ELECTRONICS
-                    </p>
-
-                    <h3>
-                        Starlight Charger
-                    </h3>
-
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            5,000 ETB
-                        </strong>
-
-
-                        <button
-                            class="add-to-cart"
-                            type="button"
-                            data-product="Starlight Charger"
-                            data-price="5000"
-                        >
-                            Add +
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PRODUCT 4 -->
-
-            <article
-                class="product-card"
-                data-category="phone"
-                data-name="5-in-1 Charging Cable"
-            >
-
-                <div class="product-image">
-
-                    <span>
-                        PRODUCT IMAGE
-                    </span>
-
-                </div>
-
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        PHONE ACCESSORY
-                    </p>
-
-                    <h3>
-                        5-in-1 Charging Cable
-                    </h3>
-
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            3,400 ETB
-                        </strong>
-
-
-                        <button
-                            class="add-to-cart"
-                            type="button"
-                            data-product="5-in-1 Charging Cable"
-                            data-price="3400"
-                        >
-                            Add +
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PRODUCT 5 -->
-
-            <article
-                class="product-card"
-                data-category="phone"
-                data-name="Magnetic Phone Holder"
-            >
-
-                <div class="product-image">
-
-                    <span>
-                        PRODUCT IMAGE
-                    </span>
-
-                </div>
-
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        PHONE ACCESSORY
-                    </p>
-
-                    <h3>
-                        Magnetic Phone Holder
-                    </h3>
-
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            2,499 ETB
-                        </strong>
-
-
-                        <button
-                            class="add-to-cart"
-                            type="button"
-                            data-product="Magnetic Phone Holder"
-                            data-price="2499"
-                        >
-                            Add +
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-
-            <!-- PRODUCT 6 -->
-
-            <article
-                class="product-card"
-                data-category="interior"
-                data-name="Car Interior Decor"
-            >
-
-                <div class="product-image">
-
-                    <span>
-                        PRODUCT IMAGE
-                    </span>
-
-                </div>
-
-
-                <div class="product-info">
-
-                    <p class="product-category">
-                        CAR INTERIOR
-                    </p>
-
-                    <h3>
-                        Car Interior Decor
-                    </h3>
-
-
-                    <div class="product-bottom">
-
-                        <strong>
-                            1,500 ETB
-                        </strong>
-
-
-                        <button
-                            class="add-to-cart"
-                            type="button"
-                            data-product="Car Interior Decor"
-                            data-price="1500"
-                        >
-                            Add +
-                        </button>
-
-                    </div>
-
-                </div>
-
-            </article>
-
+            </nav>
 
         </div>
 
-
-        <p
-            id="no-products"
-            class="no-products"
-            hidden
-        >
-            No products found.
-        </p>
+    </header>
 
 
-    </div>
+    <!-- Shop -->
 
-</section>
+    <main>
 
+        <section class="shop-hero">
 
+            <div class="container">
 
-<!-- ================= CTA ================= -->
-
-<section class="cta">
-
-    <div class="container">
-
-        <p class="eyebrow">
-            NEED HELP?
-        </p>
-
-        <h2>
-            Not sure what fits your car?
-        </h2>
-
-        <p>
-            Contact OriDrive Auto and we'll help
-            you find the right accessory.
-        </p>
-
-        <a
-            href="contact.html"
-            class="button button-primary"
-        >
-            Contact Us
-        </a>
-
-    </div>
-
-</section>
-
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="container footer-grid">
-
-
-        <div class="footer-brand">
-
-            <a href="index.html" class="logo">
-
-                <span class="logo-main">
-                    ORI<span>DRIVE</span>
+                <span
+                    class="section-label"
+                    data-i18n="shop"
+                >
+                    SHOP
                 </span>
 
-                <span class="logo-sub">
-                    AUTO
-                </span>
+                <h1 data-i18n="shopTitle">
+                    Find Your Next Upgrade.
+                </h1>
 
-            </a>
+                <p data-i18n="shopDescription">
+                    Explore our collection of automotive
+                    accessories.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="shop-section">
+
+            <div class="container">
+
+
+                <!-- Search -->
+
+                <div class="shop-controls">
+
+                    <div class="search-box">
+
+                        <input
+                            type="search"
+                            id="product-search"
+                            placeholder="Search products..."
+                            data-i18n-placeholder="searchProducts"
+                        >
+
+                    </div>
+
+
+                    <!-- Categories -->
+
+                    <div class="category-buttons">
+
+                        <button
+                            class="category-button active"
+                            data-category="all"
+                            data-i18n="all"
+                        >
+                            All
+                        </button>
+
+                        <button
+                            class="category-button"
+                            data-category="byd"
+                            data-i18n="byd"
+                        >
+                            BYD
+                        </button>
+
+                        <button
+                            class="category-button"
+                            data-category="phone"
+                            data-i18n="phoneAccessories"
+                        >
+                            Phone Accessories
+                        </button>
+
+                        <button
+                            class="category-button"
+                            data-category="electronics"
+                            data-i18n="electronics"
+                        >
+                            Electronics
+                        </button>
+
+                        <button
+                            class="category-button"
+                            data-category="interior"
+                            data-i18n="carInterior"
+                        >
+                            Car Interior
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Products -->
+
+                <div
+                    class="shop-products"
+                    id="shop-products"
+                >
+
+
+                    <!-- 1 -->
+
+                    <article
+                        class="product-card shop-product"
+                        data-category="phone byd"
+                        data-name="BYD Magnetic Phone Holder"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/byd-phone-holder.jpg"
+                                alt="BYD Magnetic Phone Holder"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                BYD
+                            </span>
+
+                            <h3>
+                                BYD Magnetic Phone Holder
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    2,000 ETB
+                                </strong>
+
+                                <button
+                                    class="add-to-cart"
+                                    data-product="BYD Magnetic Phone Holder"
+                                    data-price="2000"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 2 -->
+
+                    <article
+                        class="product-card shop-product"
+                        data-category="byd"
+                        data-name="Premium Key Fob"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/key-fob.jpg"
+                                alt="Premium Key Fob"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                BYD
+                            </span>
+
+                            <h3>
+                                Premium Key Fob
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    2,500 ETB
+                                </strong>
+
+                                <button
+                                    class="add-to-cart"
+                                    data-product="Premium Key Fob"
+                                    data-price="2500"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 3 -->
+
+                    <article
+                        class="product-card shop-product"
+                        data-category="electronics"
+                        data-name="Starlight Charger"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/starlight-charger.jpg"
+                                alt="Starlight Charger"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Electronics
+                            </span>
+
+                            <h3>
+                                Starlight Charger
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    5,000 ETB
+                                </strong>
+
+                                <button
+                                    class="add-to-cart"
+                                    data-product="Starlight Charger"
+                                    data-price="5000"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 4 -->
+
+                    <article
+                        class="product-card shop-product"
+                        data-category="phone"
+                        data-name="5-in-1 Charging Cable"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/5-in-1-cable.jpg"
+                                alt="5-in-1 Charging Cable"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Phone Accessories
+                            </span>
+
+                            <h3>
+                                5-in-1 Charging Cable
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    3,400 ETB
+                                </strong>
+
+                                <button
+                                    class="add-to-cart"
+                                    data-product="5-in-1 Charging Cable"
+                                    data-price="3400"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 5 -->
+
+                    <article
+                        class="product-card shop-product"
+                        data-category="phone"
+                        data-name="Magnetic Phone Holder"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/magnetic-phone-holder.jpg"
+                                alt="Magnetic Phone Holder"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Phone Accessories
+                            </span>
+
+                            <h3>
+                                Magnetic Phone Holder
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    2,499 ETB
+                                </strong>
+
+                                <button
+                                    class="add-to-cart"
+                                    data-product="Magnetic Phone Holder"
+                                    data-price="2499"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- 6 -->
+
+                    <article
+                        class="product-card shop-product"
+                        data-category="interior"
+                        data-name="Car Interior Decor"
+                    >
+
+                        <div class="product-image">
+
+                            <img
+                                src="images/car-interior-decor.jpg"
+                                alt="Car Interior Decor"
+                            >
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <span class="product-category">
+                                Car Interior
+                            </span>
+
+                            <h3>
+                                Car Interior Decor
+                            </h3>
+
+                            <div class="product-bottom">
+
+                                <strong>
+                                    1,500 ETB
+                                </strong>
+
+                                <button
+                                    class="add-to-cart"
+                                    data-product="Car Interior Decor"
+                                    data-price="1500"
+                                >
+                                    +
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div
+                    class="no-products"
+                    id="no-products"
+                    style="display:none;"
+                >
+                    <h3 data-i18n="noProducts">
+                        No products found.
+                    </h3>
+
+                    <p data-i18n="tryAnotherSearch">
+                        Try another search or category.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="container">
 
             <p>
-                Premium car accessories in Ethiopia.
-                Making every drive better.
+                © 2026 OriDrive Auto.
+                <span data-i18n="allRights">
+                    All rights reserved.
+                </span>
             </p>
 
         </div>
 
+    </footer>
 
 
-        <div class="footer-column">
-
-            <h4>
-                Shop
-            </h4>
-
-            <a href="shop.html">
-                All Products
-            </a>
-
-            <a href="shop.html">
-                BYD Accessories
-            </a>
-
-            <a href="shop.html">
-                Phone Accessories
-            </a>
-
-            <a href="shop.html">
-                Car Interior
-            </a>
-
-        </div>
-
-
-
-        <div class="footer-column">
-
-            <h4>
-                Company
-            </h4>
-
-            <a href="about.html">
-                About Us
-            </a>
-
-            <a href="reviews.html">
-                Reviews
-            </a>
-
-            <a href="delivery.html">
-                Delivery
-            </a>
-
-            <a href="contact.html">
-                Contact
-            </a>
-
-        </div>
-
-
-
-        <div class="footer-column">
-
-            <h4>
-                Contact
-            </h4>
-
-            <p>
-                Addis Ababa, Ethiopia
-            </p>
-
-            <a href="tel:+251000000000">
-                +251 00 000 0000
-            </a>
-
-            <a href="mailto:hello@oridriveauto.com">
-                hello@oridriveauto.com
-            </a>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="container footer-bottom">
-
-        <span>
-            © 2026 OriDrive Auto.
-            All rights reserved.
-        </span>
-
-        <span>
-            Built for the road ahead.
-        </span>
-
-    </div>
-
-</footer>
-
-
-
-<script src="js/main.js"></script>
-
-
-<script>
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-
-        const searchInput =
-            document.getElementById(
-                "product-search"
-            );
-
-
-        const products =
-            document.querySelectorAll(
-                ".shop-products .product-card"
-            );
-
-
-        const categoryButtons =
-            document.querySelectorAll(
-                ".category-button"
-            );
-
-
-        const noProducts =
-            document.getElementById(
-                "no-products"
-            );
-
-
-        let selectedCategory = "all";
-
-
-        function filterProducts() {
-
-            const search =
-                searchInput.value
-                    .toLowerCase()
-                    .trim();
-
-
-            let visibleProducts = 0;
-
-
-            products.forEach(product => {
-
-                const name =
-                    product.dataset.name
-                        .toLowerCase();
-
-
-                const categories =
-                    product.dataset.category
-                        .toLowerCase();
-
-
-                const matchesSearch =
-                    name.includes(search);
-
-
-                const matchesCategory =
-                    selectedCategory === "all" ||
-                    categories.includes(
-                        selectedCategory
-                    );
-
-
-                if (
-                    matchesSearch &&
-                    matchesCategory
-                ) {
-
-                    product.style.display =
-                        "";
-
-                    visibleProducts++;
-
-                } else {
-
-                    product.style.display =
-                        "none";
-
-                }
-
-            });
-
-
-            noProducts.hidden =
-                visibleProducts !== 0;
-
-        }
-
-
-        searchInput.addEventListener(
-            "input",
-            filterProducts
-        );
-
-
-        categoryButtons.forEach(button => {
-
-            button.addEventListener(
-                "click",
-                function () {
-
-                    categoryButtons.forEach(
-                        btn =>
-                            btn.classList.remove(
-                                "active"
-                            )
-                    );
-
-
-                    this.classList.add(
-                        "active"
-                    );
-
-
-                    selectedCategory =
-                        this.dataset.category;
-
-
-                    filterProducts();
-
-                }
-            );
-
-        });
-
-
-    }
-);
-
-</script>
-
+    <script src="js/main.js"></script>
 
 </body>
 
