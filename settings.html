@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | OriDrive Auto</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+
+            <a href="index.html" class="brand">
+                <img
+                    src="images/oridrive-logo.png"
+                    alt="OriDrive Auto Logo"
+                    class="logo"
+                >
+            </a>
+
+            <nav class="nav">
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="about.html">About</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="delivery.html">Delivery</a>
+                <a href="contact.html">Contact</a>
+                <a href="cart.html">
+                    Cart (<span class="cart-count">0</span>)
+                </a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- Settings -->
+    <main class="settings-page">
+
+        <div class="container">
+
+            <div class="settings-header">
+                <span class="settings-label">ORIDRIVE AUTO</span>
+
+                <h1>Settings</h1>
+
+                <p>
+                    Customize your OriDrive Auto experience.
+                </p>
+            </div>
+
+
+            <!-- Language -->
+            <section class="settings-card">
+
+                <div class="settings-card-header">
+
+                    <div>
+                        <h2>🌐 Language</h2>
+
+                        <p>
+                            Choose the language you want to use on the website.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="language-options">
+
+                    <button
+                        class="language-option active"
+                        data-language="en"
+                    >
+                        <span class="language-flag">🇬🇧</span>
+
+                        <span>
+                            <strong>English</strong>
+                            <small>English</small>
+                        </span>
+
+                        <span class="language-check">✓</span>
+                    </button>
+
+
+                    <button
+                        class="language-option"
+                        data-language="am"
+                    >
+                        <span class="language-flag">🇪🇹</span>
+
+                        <span>
+                            <strong>አማርኛ</strong>
+                            <small>Amharic</small>
+                        </span>
+
+                        <span class="language-check">✓</span>
+                    </button>
+
+
+                    <button
+                        class="language-option"
+                        data-language="ar"
+                    >
+                        <span class="language-flag">🇸🇦</span>
+
+                        <span>
+                            <strong>العربية</strong>
+                            <small>Arabic</small>
+                        </span>
+
+                        <span class="language-check">✓</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Website Information -->
+            <section class="settings-card">
+
+                <div class="settings-card-header">
+
+                    <div>
+                        <h2>ℹ️ Website</h2>
+
+                        <p>
+                            OriDrive Auto online store information.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-info">
+
+                    <div class="settings-info-row">
+                        <span>Website</span>
+                        <strong>OriDrive Auto</strong>
+                    </div>
+
+                    <div class="settings-info-row">
+                        <span>Location</span>
+                        <strong>Addis Ababa, Ethiopia</strong>
+                    </div>
+
+                    <div class="settings-info-row">
+                        <span>Version</span>
+                        <strong>1.0</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Back -->
+            <a href="index.html" class="settings-back">
+                ← Back to Home
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <p>
+                © 2026 OriDrive Auto. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+    <!-- Settings JavaScript -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const languageButtons =
+                document.querySelectorAll(".language-option");
+
+            const savedLanguage =
+                localStorage.getItem("oridriveLanguage") || "en";
+
+
+            function updateLanguageButtons(language) {
+
+                languageButtons.forEach(button => {
+
+                    if (button.dataset.language === language) {
+
+                        button.classList.add("active");
+
+                    } else {
+
+                        button.classList.remove("active");
+
+                    }
+
+                });
+
+            }
+
+
+            updateLanguageButtons(savedLanguage);
+
+
+            languageButtons.forEach(button => {
+
+                button.addEventListener("click", () => {
+
+                    const language =
+                        button.dataset.language;
+
+                    localStorage.setItem(
+                        "oridriveLanguage",
+                        language
+                    );
+
+                    updateLanguageButtons(language);
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
