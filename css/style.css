@@ -1039,3 +1039,593 @@ html[dir="rtl"] .settings-close {
     }
 
 }
+/* ================================= */
+/* VROOM AI CHATBOT */
+/* ================================= */
+
+.vroom-car {
+    position: fixed;
+
+    right: 18px;
+    bottom: 22px;
+
+    width: 72px;
+    height: 62px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    z-index: 15000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.vroom-car:hover {
+    transform:
+        translateY(-5px)
+        scale(1.08);
+}
+
+
+/* Toy car */
+
+.vroom-car-body {
+    display: block;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    filter:
+        drop-shadow(
+            0 5px 5px
+            rgba(0,0,0,0.25)
+        );
+
+    animation:
+        vroomDrive 2.5s
+        ease-in-out
+        infinite;
+}
+
+
+/* Little VROOM label */
+
+.vroom-name {
+    margin-top: 4px;
+
+    padding: 3px 7px;
+
+    border-radius: 999px;
+
+    background: var(--black);
+
+    color: var(--orange);
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+
+/* Driving animation */
+
+@keyframes vroomDrive {
+
+    0% {
+        transform:
+            translateX(0)
+            rotate(0deg);
+    }
+
+    20% {
+        transform:
+            translateX(-3px)
+            rotate(-2deg);
+    }
+
+    40% {
+        transform:
+            translateX(3px)
+            rotate(2deg);
+    }
+
+    60% {
+        transform:
+            translateX(-2px)
+            rotate(-1deg);
+    }
+
+    80% {
+        transform:
+            translateX(2px)
+            rotate(1deg);
+    }
+
+    100% {
+        transform:
+            translateX(0)
+            rotate(0deg);
+    }
+
+}
+
+
+/* ================================= */
+/* VROOM CHAT WINDOW */
+/* ================================= */
+
+.vroom-chat {
+    position: fixed;
+
+    right: 20px;
+    bottom: 92px;
+
+    width: min(
+        370px,
+        calc(100vw - 30px)
+    );
+
+    height: 520px;
+
+    background: var(--dark);
+
+    border:
+        1px solid
+        rgba(255, 106, 0, 0.35);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    z-index: 16000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.45);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(30px)
+        scale(0.9);
+
+    transform-origin:
+        bottom right;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.35s
+        cubic-bezier(
+            .16,
+            1,
+            .3,
+            1
+        ),
+        visibility 0.3s ease;
+}
+
+
+.vroom-chat.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* ================================= */
+/* VROOM HEADER */
+/* ================================= */
+
+.vroom-header {
+
+    min-height: 72px;
+
+    padding:
+        12px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171717,
+            #0b0b0b
+        );
+
+    border-bottom:
+        1px solid #292929;
+}
+
+
+.vroom-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: white;
+}
+
+
+.vroom-icon {
+
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        rgba(
+            255,
+            106,
+            0,
+            0.12
+        );
+
+    font-size: 25px;
+}
+
+
+.vroom-title strong {
+
+    display: block;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+.vroom-title small {
+
+    display: block;
+
+    margin-top: 3px;
+
+    color: #888;
+
+    font-size: 10px;
+}
+
+
+.vroom-close {
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #242424;
+
+    color: white;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.vroom-close:hover {
+
+    background: var(--orange);
+
+    transform: rotate(90deg);
+}
+
+
+/* ================================= */
+/* MESSAGES */
+/* ================================= */
+
+.vroom-messages {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 18px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(
+                255,
+                106,
+                0,
+                0.06
+            ),
+            transparent 35%
+        ),
+        #101010;
+}
+
+
+.vroom-message {
+
+    max-width: 85%;
+
+    padding:
+        11px 14px;
+
+    border-radius: 15px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    animation:
+        vroomMessageIn
+        0.3s ease;
+}
+
+
+.vroom-message.bot {
+
+    align-self: flex-start;
+
+    background: #202020;
+
+    color: #eee;
+
+    border-bottom-left-radius: 5px;
+}
+
+
+.vroom-message.user {
+
+    align-self: flex-end;
+
+    background: var(--orange);
+
+    color: white;
+
+    border-bottom-right-radius: 5px;
+}
+
+
+@keyframes vroomMessageIn {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* ================================= */
+/* SUGGESTIONS */
+/* ================================= */
+
+.vroom-suggestions {
+
+    display: flex;
+
+    gap: 7px;
+
+    overflow-x: auto;
+
+    padding:
+        10px 14px;
+
+    background: #151515;
+
+    border-top:
+        1px solid #252525;
+}
+
+
+.vroom-suggestions button {
+
+    flex-shrink: 0;
+
+    padding:
+        7px 10px;
+
+    border:
+        1px solid #333;
+
+    border-radius: 999px;
+
+    background: #1d1d1d;
+
+    color: #ddd;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.vroom-suggestions button:hover {
+
+    border-color:
+        var(--orange);
+
+    color:
+        var(--orange);
+}
+
+
+/* ================================= */
+/* INPUT */
+/* ================================= */
+
+.vroom-input-area {
+
+    display: flex;
+
+    gap: 8px;
+
+    padding: 12px;
+
+    background: #0b0b0b;
+
+    border-top:
+        1px solid #292929;
+}
+
+
+.vroom-input-area input {
+
+    flex: 1;
+
+    min-width: 0;
+
+    border:
+        1px solid #333;
+
+    border-radius: 12px;
+
+    background: #191919;
+
+    color: white;
+
+    outline: none;
+
+    padding:
+        12px 13px;
+
+    font-size: 13px;
+}
+
+
+.vroom-input-area input:focus {
+
+    border-color:
+        var(--orange);
+}
+
+
+.vroom-input-area input::placeholder {
+
+    color: #666;
+}
+
+
+.vroom-input-area button {
+
+    width: 43px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background:
+        var(--orange);
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.vroom-input-area button:hover {
+
+    background:
+        var(--orange-dark);
+
+    transform:
+        scale(1.05);
+}
+
+
+/* ================================= */
+/* MOBILE */
+/* ================================= */
+
+@media (max-width: 600px) {
+
+    .vroom-car {
+
+        right: 12px;
+
+        bottom: 15px;
+
+    }
+
+
+    .vroom-chat {
+
+        right: 10px;
+
+        bottom: 82px;
+
+        width:
+            calc(100vw - 20px);
+
+        height: 500px;
+
+        border-radius: 20px;
+
+    }
+
+}
