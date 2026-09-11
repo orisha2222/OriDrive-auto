@@ -135,3 +135,129 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartCount();
 
 });
+/* ================================= */
+/* SETTINGS POPUP */
+/* ================================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const settingsButton =
+        document.getElementById("settingsButton");
+
+    const settingsOverlay =
+        document.getElementById("settingsOverlay");
+
+    const settingsClose =
+        document.getElementById("settingsClose");
+
+    const languageButtons =
+        document.querySelectorAll(".language-option");
+
+
+    /* Open settings */
+
+    if (settingsButton && settingsOverlay) {
+
+        settingsButton.addEventListener("click", () => {
+
+            settingsOverlay.classList.add("active");
+
+        });
+
+    }
+
+
+    /* Close settings */
+
+    if (settingsClose && settingsOverlay) {
+
+        settingsClose.addEventListener("click", () => {
+
+            settingsOverlay.classList.remove("active");
+
+        });
+
+    }
+
+
+    /* Close when clicking outside */
+
+    if (settingsOverlay) {
+
+        settingsOverlay.addEventListener("click", (event) => {
+
+            if (event.target === settingsOverlay) {
+
+                settingsOverlay.classList.remove("active");
+
+            }
+
+        });
+
+    }
+
+
+    /* Close with Escape */
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape" && settingsOverlay) {
+
+            settingsOverlay.classList.remove("active");
+
+        }
+
+    });
+
+
+    /* ============================== */
+    /* LANGUAGE */
+    /* ============================== */
+
+    const savedLanguage =
+        localStorage.getItem("oridriveLanguage") || "en";
+
+
+    function updateLanguageButtons(language) {
+
+        languageButtons.forEach(button => {
+
+            button.classList.toggle(
+                "active",
+                button.dataset.language === language
+            );
+
+        });
+
+    }
+
+
+    updateLanguageButtons(savedLanguage);
+
+
+    languageButtons.forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const language =
+                button.dataset.language;
+
+            localStorage.setItem(
+                "oridriveLanguage",
+                language
+            );
+
+            updateLanguageButtons(language);
+
+            /*
+             * Reload the page so the selected
+             * language can be applied everywhere.
+             */
+
+            window.location.reload();
+
+        });
+
+    });
+
+});
