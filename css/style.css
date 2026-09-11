@@ -117,6 +117,10 @@ section {
     line-height: 1;
     font-weight: 800;
     color: white;
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
 }
 
 .logo-main {
