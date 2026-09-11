@@ -963,3 +963,328 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+/* ================================= */
+/* VROOM AI ASSISTANT */
+/* ================================= */
+
+const vroomButton =
+    document.getElementById("vroomButton");
+
+const vroomChat =
+    document.getElementById("vroomChat");
+
+const vroomClose =
+    document.getElementById("vroomClose");
+
+const vroomForm =
+    document.getElementById("vroomForm");
+
+const vroomInput =
+    document.getElementById("vroomInput");
+
+const vroomMessages =
+    document.getElementById("vroomMessages");
+
+
+
+/* Open VROOM */
+
+if (vroomButton && vroomChat) {
+
+    vroomButton.addEventListener(
+        "click",
+        () => {
+
+            vroomChat.classList.add(
+                "active"
+            );
+
+            setTimeout(() => {
+
+                if (vroomInput) {
+                    vroomInput.focus();
+                }
+
+            }, 350);
+
+        }
+    );
+
+}
+
+
+/* Close VROOM */
+
+if (vroomClose && vroomChat) {
+
+    vroomClose.addEventListener(
+        "click",
+        () => {
+
+            vroomChat.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+}
+
+
+/* Add message */
+
+function addVroomMessage(
+    message,
+    sender
+) {
+
+    const messageElement =
+        document.createElement("div");
+
+    messageElement.className =
+        `vroom-message ${sender}`;
+
+    messageElement.innerHTML =
+        message;
+
+    vroomMessages.appendChild(
+        messageElement
+    );
+
+    vroomMessages.scrollTop =
+        vroomMessages.scrollHeight;
+
+}
+
+
+/* VROOM response */
+
+function getVroomResponse(
+    message
+) {
+
+    const text =
+        message
+            .toLowerCase()
+            .trim();
+
+
+    if (
+        text.includes("product") ||
+        text.includes("shop") ||
+        text.includes("buy")
+    ) {
+
+        return `
+            🛍️ You can browse all our products
+            on the <strong>Shop</strong> page.
+            <br><br>
+            We've got automotive accessories,
+            phone accessories, electronics and more.
+        `;
+
+    }
+
+
+    if (
+        text.includes("phone") ||
+        text.includes("holder")
+    ) {
+
+        return `
+            📱 We have magnetic phone holders
+            designed for your car.
+            <br><br>
+            Check the Shop page for the current
+            products and prices.
+        `;
+
+    }
+
+
+    if (
+        text.includes("price") ||
+        text.includes("cost")
+    ) {
+
+        return `
+            💰 Product prices are displayed
+            directly on the Shop page.
+            <br><br>
+            No mysterious "DM for price" nonsense.
+            Humanity has suffered enough.
+        `;
+
+    }
+
+
+    if (
+        text.includes("contact") ||
+        text.includes("phone") ||
+        text.includes("call")
+    ) {
+
+        return `
+            📞 You can contact OriDrive Auto
+            through the Contact section of the website.
+        `;
+
+    }
+
+
+    if (
+        text.includes("delivery") ||
+        text.includes("deliver")
+    ) {
+
+        return `
+            🚚 OriDrive Auto provides delivery
+            in Addis Ababa and selected locations.
+            <br><br>
+            Delivery details can be confirmed
+            when placing your order.
+        `;
+
+    }
+
+
+    if (
+        text.includes("byd")
+    ) {
+
+        return `
+            🚘 We carry BYD-related accessories,
+            including key fobs and phone accessories.
+            <br><br>
+            Check the BYD category in the Shop.
+        `;
+
+    }
+
+
+    if (
+        text.includes("hello") ||
+        text.includes("hi") ||
+        text.includes("hey")
+    ) {
+
+        return `
+            👋 Hey there!
+            <br><br>
+            I'm <strong>VROOM</strong>,
+            OriDrive Auto's little digital assistant.
+            🚗
+            <br><br>
+            What are you looking for?
+        `;
+
+    }
+
+
+    if (
+        text.includes("vroom")
+    ) {
+
+        return `
+            🚗 That's me!
+            <br><br>
+            Small car. Big responsibilities.
+            Very questionable career choice.
+        `;
+
+    }
+
+
+    return `
+        🤔 I'm still learning.
+        <br><br>
+        Try asking me about
+        <strong>products, prices, BYD, delivery,
+        or contacting OriDrive Auto.</strong>
+    `;
+
+}
+
+
+
+/* ================================= */
+/* SEND MESSAGE */
+/* ================================= */
+
+function sendVroomMessage(
+    message
+) {
+
+    if (!message.trim()) {
+        return;
+    }
+
+
+    addVroomMessage(
+        message,
+        "user"
+    );
+
+
+    vroomInput.value = "";
+
+
+    setTimeout(() => {
+
+        const response =
+            getVroomResponse(
+                message
+            );
+
+        addVroomMessage(
+            response,
+            "bot"
+        );
+
+    }, 500);
+
+}
+
+
+
+/* Form submit */
+
+if (vroomForm) {
+
+    vroomForm.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+            sendVroomMessage(
+                vroomInput.value
+            );
+
+        }
+    );
+
+}
+
+
+
+/* Quick buttons */
+
+document
+    .querySelectorAll(
+        "[data-vroom]"
+    )
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                sendVroomMessage(
+                    button.dataset.vroom
+                );
+
+            }
+        );
+
+    });
