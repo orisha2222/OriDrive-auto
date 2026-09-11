@@ -1,77 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <meta name="description" content="OriDrive Auto - Premium car accessories in Ethiopia. Upgrade your drive with quality automotive accessories.">
+    <title>OriDrive Auto</title>
 
-    <title>OriDrive Auto | Upgrade Your Drive</title>
-
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 </head>
 
 <body>
-    <!-- Floating OriDrive Settings Button -->
-<button class="floating-settings" id="settingsButton" aria-label="Open settings">
-    <img
-        src="images/238DFE22-C993-4670-8DEC-13A79928F5AA.png"
-        alt="OriDrive Auto"
+
+    <!-- ============================= -->
+    <!-- FLOATING LOGO / SETTINGS -->
+    <!-- ============================= -->
+
+    <button
+        class="floating-settings"
+        id="settingsButton"
+        aria-label="Open settings"
     >
-</button>
-<!-- Settings Popup -->
-<div class="settings-overlay" id="settingsOverlay">
+        <img
+            src="images/oridrive-logo.png"
+            alt="OriDrive Auto"
+        >
+    </button>
 
-    <div class="settings-popup">
 
-        <button class="settings-close" id="settingsClose">
-            ×
-        </button>
+    <!-- ============================= -->
+    <!-- SETTINGS POPUP -->
+    <!-- ============================= -->
 
-        <div class="settings-popup-logo">
-            <img
-                src="images/oridrive-logo.png"
-                alt="OriDrive Auto"
+    <div
+        class="settings-overlay"
+        id="settingsOverlay"
+    >
+
+        <div class="settings-popup">
+
+            <button
+                class="settings-close"
+                id="settingsClose"
+                aria-label="Close settings"
             >
-        </div>
+                ×
+            </button>
 
-        <h2>Settings</h2>
+            <div class="settings-popup-logo">
 
-        <p class="settings-description">
-            Customize your OriDrive Auto experience.
-        </p>
-
-        <!-- Language -->
-        <div class="setting-section">
-
-            <h3>🌐 Language</h3>
-
-            <div class="language-options">
-
-                <button
-                    class="language-option"
-                    data-language="en"
+                <img
+                    src="images/oridrive-logo.png"
+                    alt="OriDrive Auto"
                 >
-                    🇬🇧 English
-                    <span>✓</span>
-                </button>
 
-                <button
-                    class="language-option"
-                    data-language="am"
-                >
-                    🇪🇹 አማርኛ
-                    <span>✓</span>
-                </button>
+            </div>
 
-                <button
-                    class="language-option"
-                    data-language="ar"
-                >
-                    🇸🇦 العربية
-                    <span>✓</span>
-                </button>
+            <h2 data-i18n="settings">
+                Settings
+            </h2>
+
+            <p
+                class="settings-description"
+                data-i18n="settingsDescription"
+            >
+                Customize your OriDrive Auto experience.
+            </p>
+
+            <div class="setting-section">
+
+                <h3 data-i18n="language">
+                    🌐 Language
+                </h3>
+
+                <div class="language-options">
+
+                    <button
+                        class="language-option"
+                        data-language="en"
+                    >
+                        <span>🇬🇧 English</span>
+                        <span class="language-check">✓</span>
+                    </button>
+
+                    <button
+                        class="language-option"
+                        data-language="am"
+                    >
+                        <span>🇪🇹 አማርኛ</span>
+                        <span class="language-check">✓</span>
+                    </button>
+
+                    <button
+                        class="language-option"
+                        data-language="ar"
+                    >
+                        <span>🇸🇦 العربية</span>
+                        <span class="language-check">✓</span>
+                    </button>
+
+                </div>
 
             </div>
 
@@ -79,48 +114,88 @@
 
     </div>
 
-</div>
-    <!-- ================= HEADER ================= -->
+
+    <!-- ============================= -->
+    <!-- HEADER -->
+    <!-- ============================= -->
 
     <header class="header">
 
-        <div class="container header-content">
+        <div class="container header-inner">
 
-            <a href="index.html" class="brand">
-    <img src="images/ 238DFE22-C993-4670-8DEC-13A79928F5AA.png"
-         alt="OriDrive Auto"
-style="width: 55px; height: 55px; object-fit: contain;">
-</a>
+            <a
+                href="index.html"
+                class="brand"
+            >
+                <span class="brand-text">
+                    ORIDRIVE
+                    <small>AUTO</small>
+                </span>
+            </a>
 
-            <nav class="navigation">
 
-                <a href="index.html" class="active">Home</a>
+            <nav class="nav">
 
-                <a href="shop.html">Shop</a>
+                <a
+                    href="index.html"
+                    data-i18n="home"
+                >
+                    Home
+                </a>
 
-                <a href="about.html">About</a>
+                <a
+                    href="shop.html"
+                    data-i18n="shop"
+                >
+                    Shop
+                </a>
 
-                <a href="settings.html">Settings</a>
+                <a
+                    href="#about"
+                    data-i18n="about"
+                >
+                    About
+                </a>
 
-                <a href="reviews.html">Reviews</a>
+                <a
+                    href="#reviews"
+                    data-i18n="reviews"
+                >
+                    Reviews
+                </a>
 
-                <a href="delivery.html">Delivery</a>
+                <a
+                    href="#delivery"
+                    data-i18n="delivery"
+                >
+                    Delivery
+                </a>
 
-                <a href="contact.html">Contact</a>
+                <a
+                    href="#contact"
+                    data-i18n="contact"
+                >
+                    Contact
+                </a>
+
+                <a href="cart.html">
+                    <span data-i18n="cart">
+                        Cart
+                    </span>
+
+                    (<span class="cart-count">0</span>)
+                </a>
 
             </nav>
-
-            <a href="cart.html" class="cart-button">
-                Cart
-                <span class="cart-count">0</span>
-            </a>
 
         </div>
 
     </header>
 
 
-    <!-- ================= HERO ================= -->
+    <!-- ============================= -->
+    <!-- HERO -->
+    <!-- ============================= -->
 
     <main>
 
@@ -128,44 +203,39 @@ style="width: 55px; height: 55px; object-fit: contain;">
 
             <div class="container hero-content">
 
-                <div class="hero-text">
+                <span
+                    class="hero-label"
+                    data-i18n="heroLabel"
+                >
+                    PREMIUM AUTOMOTIVE ACCESSORIES
+                </span>
 
-                    <p class="eyebrow">
-                        PREMIUM CAR ACCESSORIES · ETHIOPIA
-                    </p>
+                <h1 data-i18n="heroTitle">
+                    Upgrade Your Drive.
+                </h1>
 
-                    <h1>
-                        Upgrade<br>
-                        Your Drive.
-                    </h1>
+                <p data-i18n="heroDescription">
+                    Premium car accessories designed to make
+                    every drive better.
+                </p>
 
-                    <p class="hero-description">
-                        Discover premium car accessories designed
-                        to make every drive more comfortable,
-                        stylish and convenient.
-                    </p>
+                <div class="hero-buttons">
 
-                    <div class="hero-buttons">
+                    <a
+                        href="shop.html"
+                        class="btn btn-primary"
+                        data-i18n="shopNow"
+                    >
+                        Shop Now
+                    </a>
 
-                        <a href="shop.html" class="button button-primary">
-                            Shop Now
-                        </a>
-
-                        <a href="#featured" class="button button-secondary">
-                            Explore Collection
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="hero-image">
-
-                    <div class="hero-image-placeholder">
-                        <span>ORIDRIVE AUTO</span>
-                        <small>Your car deserves better.</small>
-                    </div>
+                    <a
+                        href="#about"
+                        class="btn btn-secondary"
+                        data-i18n="learnMore"
+                    >
+                        Learn More
+                    </a>
 
                 </div>
 
@@ -174,30 +244,40 @@ style="width: 55px; height: 55px; object-fit: contain;">
         </section>
 
 
-        <!-- ================= TRUST BAR ================= -->
+        <!-- ============================= -->
+        <!-- TRUST BAR -->
+        <!-- ============================= -->
 
         <section class="trust-bar">
 
             <div class="container trust-grid">
 
                 <div class="trust-item">
-                    <strong>Fast Delivery</strong>
-                    <span>Addis & nationwide</span>
+                    <strong>✓</strong>
+                    <span data-i18n="qualityProducts">
+                        Quality Products
+                    </span>
                 </div>
 
                 <div class="trust-item">
-                    <strong>Quality Products</strong>
-                    <span>Selected for your drive</span>
+                    <strong>✓</strong>
+                    <span data-i18n="fastDelivery">
+                        Fast Delivery
+                    </span>
                 </div>
 
                 <div class="trust-item">
-                    <strong>Secure Checkout</strong>
-                    <span>Simple & reliable</span>
+                    <strong>✓</strong>
+                    <span data-i18n="customerSupport">
+                        Customer Support
+                    </span>
                 </div>
 
                 <div class="trust-item">
-                    <strong>Trusted Service</strong>
-                    <span>Customer first</span>
+                    <strong>✓</strong>
+                    <span data-i18n="secureShopping">
+                        Secure Shopping
+                    </span>
                 </div>
 
             </div>
@@ -205,48 +285,61 @@ style="width: 55px; height: 55px; object-fit: contain;">
         </section>
 
 
-        <!-- ================= FEATURED PRODUCTS ================= -->
+        <!-- ============================= -->
+        <!-- FEATURED PRODUCTS -->
+        <!-- ============================= -->
 
-        <section class="featured" id="featured">
+        <section class="section">
 
             <div class="container">
 
                 <div class="section-heading">
 
-                    <div>
-                        <p class="eyebrow">SHOP OUR COLLECTION</p>
+                    <span
+                        class="section-label"
+                        data-i18n="featured"
+                    >
+                        FEATURED
+                    </span>
 
-                        <h2>
-                            Featured Products
-                        </h2>
-                    </div>
+                    <h2 data-i18n="featuredProducts">
+                        Featured Products
+                    </h2>
 
-                    <a href="shop.html" class="view-all">
-                        View All →
-                    </a>
+                    <p data-i18n="featuredDescription">
+                        Explore some of our most popular
+                        automotive accessories.
+                    </p>
 
                 </div>
 
 
                 <div class="product-grid">
 
-
-                    <!-- PRODUCT 1 -->
+                    <!-- Product 1 -->
 
                     <article class="product-card">
 
                         <div class="product-image">
-                            <span>PRODUCT IMAGE</span>
+
+                            <img
+                                src="images/byd-phone-holder.jpg"
+                                alt="BYD Magnetic Phone Holder"
+                            >
+
                         </div>
 
                         <div class="product-info">
 
-                            <p class="product-category">
-                                PHONE ACCESSORIES
-                            </p>
+                            <span
+                                class="product-category"
+                                data-i18n="phoneAccessories"
+                            >
+                                Phone Accessories
+                            </span>
 
                             <h3>
-                                 Magnetic Phone Holder
+                                BYD Magnetic Phone Holder
                             </h3>
 
                             <div class="product-bottom">
@@ -257,10 +350,10 @@ style="width: 55px; height: 55px; object-fit: contain;">
 
                                 <button
                                     class="add-to-cart"
-                                    type="button"
                                     data-product="BYD Magnetic Phone Holder"
-                                    data-price="2000">
-                                    Add +
+                                    data-price="2000"
+                                >
+                                    +
                                 </button>
 
                             </div>
@@ -270,19 +363,27 @@ style="width: 55px; height: 55px; object-fit: contain;">
                     </article>
 
 
-                    <!-- PRODUCT 2 -->
+                    <!-- Product 2 -->
 
                     <article class="product-card">
 
                         <div class="product-image">
-                            <span>PRODUCT IMAGE</span>
+
+                            <img
+                                src="images/key-fob.jpg"
+                                alt="Premium Key Fob"
+                            >
+
                         </div>
 
                         <div class="product-info">
 
-                            <p class="product-category">
-                                BYD ACCESSORIES
-                            </p>
+                            <span
+                                class="product-category"
+                                data-i18n="carAccessories"
+                            >
+                                Car Accessories
+                            </span>
 
                             <h3>
                                 Premium Key Fob
@@ -296,10 +397,10 @@ style="width: 55px; height: 55px; object-fit: contain;">
 
                                 <button
                                     class="add-to-cart"
-                                    type="button"
                                     data-product="Premium Key Fob"
-                                    data-price="2500">
-                                    Add +
+                                    data-price="2500"
+                                >
+                                    +
                                 </button>
 
                             </div>
@@ -309,19 +410,27 @@ style="width: 55px; height: 55px; object-fit: contain;">
                     </article>
 
 
-                    <!-- PRODUCT 3 -->
+                    <!-- Product 3 -->
 
                     <article class="product-card">
 
                         <div class="product-image">
-                            <span>PRODUCT IMAGE</span>
+
+                            <img
+                                src="images/starlight-charger.jpg"
+                                alt="Starlight Charger"
+                            >
+
                         </div>
 
                         <div class="product-info">
 
-                            <p class="product-category">
-                                CAR ELECTRONICS
-                            </p>
+                            <span
+                                class="product-category"
+                                data-i18n="electronics"
+                            >
+                                Electronics
+                            </span>
 
                             <h3>
                                 Starlight Charger
@@ -335,10 +444,10 @@ style="width: 55px; height: 55px; object-fit: contain;">
 
                                 <button
                                     class="add-to-cart"
-                                    type="button"
                                     data-product="Starlight Charger"
-                                    data-price="5000">
-                                    Add +
+                                    data-price="5000"
+                                >
+                                    +
                                 </button>
 
                             </div>
@@ -347,53 +456,17 @@ style="width: 55px; height: 55px; object-fit: contain;">
 
                     </article>
 
-
                 </div>
 
-            </div>
 
-        </section>
+                <div class="center-button">
 
-
-        <!-- ================= BRAND SECTION ================= -->
-
-        <section class="brand-section">
-
-            <div class="container brand-grid">
-
-                <div class="brand-image">
-
-                    <div class="brand-image-placeholder">
-                        ORIDRIVE
-                    </div>
-
-                </div>
-
-                <div class="brand-text">
-
-                    <p class="eyebrow">
-                        WHY ORIDRIVE
-                    </p>
-
-                    <h2>
-                        Your car deserves better.
-                    </h2>
-
-                    <p>
-                        OriDrive Auto brings together carefully
-                        selected automotive accessories that combine
-                        style, practicality and quality.
-                    </p>
-
-                    <p>
-                        From everyday driving essentials to
-                        accessories that make your interior feel
-                        better, we're here to help you upgrade
-                        the way you drive.
-                    </p>
-
-                    <a href="about.html" class="text-link">
-                        Learn More About Us →
+                    <a
+                        href="shop.html"
+                        class="btn btn-primary"
+                        data-i18n="viewAllProducts"
+                    >
+                        View All Products
                     </a>
 
                 </div>
@@ -403,88 +476,39 @@ style="width: 55px; height: 55px; object-fit: contain;">
         </section>
 
 
-        <!-- ================= REVIEWS ================= -->
+        <!-- ============================= -->
+        <!-- ABOUT -->
+        <!-- ============================= -->
 
-        <section class="reviews-preview">
+        <section
+            class="section about-section"
+            id="about"
+        >
 
-            <div class="container">
+            <div class="container about-grid">
 
-                <div class="section-heading centered">
+                <div>
 
-                    <p class="eyebrow">
-                        CUSTOMER EXPERIENCE
-                    </p>
+                    <span
+                        class="section-label"
+                        data-i18n="aboutUs"
+                    >
+                        ABOUT US
+                    </span>
 
-                    <h2>
-                        What Our Customers Say
+                    <h2 data-i18n="aboutTitle">
+                        Built for people who care about their drive.
                     </h2>
 
-                    <p>
-                        Real experiences from real OriDrive Auto customers.
+                </div>
+
+                <div>
+
+                    <p data-i18n="aboutText">
+                        OriDrive Auto provides premium automotive
+                        accessories for drivers who want quality,
+                        style and practicality.
                     </p>
-
-                </div>
-
-
-                <div class="review-grid">
-
-                    <article class="review-card">
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                        <p>
-                            Your real customer review will appear here.
-                        </p>
-
-                        <strong>
-                            Customer Name
-                        </strong>
-
-                    </article>
-
-
-                    <article class="review-card">
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                        <p>
-                            Your real customer review will appear here.
-                        </p>
-
-                        <strong>
-                            Customer Name
-                        </strong>
-
-                    </article>
-
-
-                    <article class="review-card">
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                        <p>
-                            Your real customer review will appear here.
-                        </p>
-
-                        <strong>
-                            Customer Name
-                        </strong>
-
-                    </article>
-
-                </div>
-
-                <div class="reviews-button">
-
-                    <a href="reviews.html" class="button button-secondary">
-                        See All Reviews
-                    </a>
 
                 </div>
 
@@ -493,28 +517,94 @@ style="width: 55px; height: 55px; object-fit: contain;">
         </section>
 
 
-        <!-- ================= CTA ================= -->
+        <!-- ============================= -->
+        <!-- REVIEWS -->
+        <!-- ============================= -->
 
-        <section class="cta">
+        <section
+            class="section"
+            id="reviews"
+        >
 
             <div class="container">
 
-                <p class="eyebrow">
-                    READY TO UPGRADE?
-                </p>
+                <div class="section-heading">
 
-                <h2>
-                    Make every drive better.
+                    <span
+                        class="section-label"
+                        data-i18n="reviews"
+                    >
+                        REVIEWS
+                    </span>
+
+                    <h2 data-i18n="customerReviews">
+                        Customer Reviews
+                    </h2>
+
+                    <p data-i18n="reviewMessage">
+                        Your experience matters to us.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- DELIVERY -->
+        <!-- ============================= -->
+
+        <section
+            class="section delivery-section"
+            id="delivery"
+        >
+
+            <div class="container">
+
+                <span
+                    class="section-label"
+                    data-i18n="delivery"
+                >
+                    DELIVERY
+                </span>
+
+                <h2 data-i18n="deliveryTitle">
+                    We deliver your order to you.
                 </h2>
 
-                <p>
-                    Discover accessories made for your car,
-                    your lifestyle and the road ahead.
+                <p data-i18n="deliveryText">
+                    Delivery options are available in Addis
+                    Ababa and selected locations.
                 </p>
 
-                <a href="shop.html" class="button button-primary">
-                    Explore The Shop
-                </a>
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- CONTACT -->
+        <!-- ============================= -->
+
+        <section
+            class="section contact-section"
+            id="contact"
+        >
+
+            <div class="container">
+
+                <span
+                    class="section-label"
+                    data-i18n="contact"
+                >
+                    CONTACT
+                </span>
+
+                <h2 data-i18n="contactTitle">
+                    Get in touch with OriDrive Auto.
+                </h2>
 
             </div>
 
@@ -523,103 +613,28 @@ style="width: 55px; height: 55px; object-fit: contain;">
     </main>
 
 
-    <!-- ================= FOOTER ================= -->
+    <!-- ============================= -->
+    <!-- FOOTER -->
+    <!-- ============================= -->
 
     <footer class="footer">
 
-        <div class="container footer-grid">
+        <div class="container">
 
-            <div class="footer-brand">
-
-                <a href="index.html" class="logo">
-
-                    <span class="logo-main">
-                        ORI<span>DRIVE</span>
-                    </span>
-
-                    <span class="logo-sub">
-                        AUTO
-                    </span>
-
-                </a>
-
-                <p>
-                    Premium car accessories in Ethiopia.
-                    Making every drive better.
-                </p>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Shop</h4>
-
-                <a href="shop.html">All Products</a>
-
-                <a href="shop.html">BYD Accessories</a>
-
-                <a href="shop.html">Phone Accessories</a>
-
-                <a href="shop.html">Car Interior</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Company</h4>
-
-                <a href="about.html">About Us</a>
-
-                <a href="reviews.html">Reviews</a>
-
-                <a href="delivery.html">Delivery</a>
-
-                <a href="contact.html">Contact</a>
-
-            </div>
-
-
-            <div class="footer-column">
-
-                <h4>Contact</h4>
-
-                <p>
-                    Addis Ababa, Ethiopia
-                </p>
-
-                <a href="tel:+251944201194">
-                    +251 94 420 1194
-                </a>
-
-                <a href="mailto:hello@oridriveauto.com">
-                    hello@oridriveauto.com
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="container footer-bottom">
-
-            <span>
-                © 2026 OriDrive Auto. All rights reserved.
-            </span>
-
-            <span>
-                Built for the road ahead.
-            </span>
+            <p>
+                © 2026 OriDrive Auto.
+                <span data-i18n="allRights">
+                    All rights reserved.
+                </span>
+            </p>
 
         </div>
 
     </footer>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
-
     <script src="js/main.js"></script>
 
 </body>
+
 </html>
